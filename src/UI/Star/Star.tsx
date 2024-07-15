@@ -1,3 +1,4 @@
+import './Star.scss'
 interface StarProps {
   edges: number;
   innerR: number;
@@ -16,10 +17,12 @@ const Star = ({ edges, innerR, outerR, size, isRound }: StarProps) => {
   }
 
   return (
+    <div className='star'>
     <svg viewBox="-100 -100 200 200" width={`${size}`} height={`${size}`}>
       <polygon points={points.join(' ')} fill="gold" stroke="gold" strokeWidth={`${innerR/2}`} strokeLinejoin={isRound? 'round' : 'miter'} strokeLinecap={isRound? 'round' : 'butt'}
       /> 
     </svg>
+    </div>
   );
 };
 

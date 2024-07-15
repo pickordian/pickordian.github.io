@@ -4,10 +4,7 @@ import Home from './components/Home/Home'
 function App() {
   return (
     <>
-    <Header/>
-    <div className='content'>
       <Home/>
-    </div>
    </>
   )
 }

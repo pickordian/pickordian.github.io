@@ -1,0 +1,18 @@
+.star {
+    position: relative;
+    filter: drop-shadow(0 0 0.75rem hsl(39, 100%, 50%));
+}
+
+.star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    border-radius: 9999px;
+    background: radial-gradient(circle at center, hsl(51, 100%, 50%), hsl(51, 50%, 80%));
+    filter: blur(1rem);
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+}
