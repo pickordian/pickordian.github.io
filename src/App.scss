@@ -2,15 +2,11 @@
   font-family: exocet;
   src: url("./assets/fonts/Mantinia\ Regular.otf");
 }
+
 body {
   width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    ellipse at top,
-    hsl(219, 52%, 20%),
-    hsl(219, 50%, 4%)
-  );
-  background-color:  hsl(219, 50%, 10%);
+  height: 100svh;
+  background: radial-gradient(ellipse at top, hsl(219, 52%, 15%), hsl(219, 52%, 20%));
   margin: 0;
   color: hsl(126, 30%, 95%);
   font-family: exocet, sans-serif;
@@ -20,10 +16,12 @@ body {
 #root {
   display: flex;
 }
+
 .content {
   display: flex;
   flex: 1;
 }
+
 .CTA-btn {
   color: hsl(126, 30%, 95%);
   padding: 0.75rem 1.5rem;

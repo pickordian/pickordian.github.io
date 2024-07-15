@@ -1,6 +1,10 @@
+:root{
+    --star-color: gold;
+}
 .star {
-    position: relative;
-    filter: drop-shadow(0 0 0.75rem hsl(39, 100%, 50%));
+    position: absolute;
+    line-height: 0;
+    filter: drop-shadow(0 0 0.75rem var(--star-color));
 }
 
 .star::after {
@@ -11,8 +15,33 @@
     width: 80%;
     height: 80%;
     border-radius: 9999px;
-    background: radial-gradient(circle at center, hsl(51, 100%, 50%), hsl(51, 50%, 80%));
-    filter: blur(1rem);
+    background: radial-gradient(circle at center, var(--star-color), var(--star-color));
+    filter: blur(0.5rem);
     opacity: 0.2;
     transform: translate(-50%, -50%);
+    animation: star-blink 2000ms infinite forwards;
+}
+.star::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    border-radius: 9999px;
+    background: radial-gradient(circle at center, var(--star-color), var(--star-color));
+    transform: translate(-50%, -50%);
+    animation: star-blink 1500ms infinite forwards;
+}
+
+@keyframes star-blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }

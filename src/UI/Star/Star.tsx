@@ -1,27 +1,31 @@
 import './Star.scss'
 interface StarProps {
   edges: number;
-  innerR: number;
-  outerR: number;
   size: number;
-  isRound: boolean;
+  is_round: boolean;
+  color: string;
+}
+declare module 'react' {
+  interface CSSProperties {
+    '--star-color': string,
+  }
 }
 
-const Star = ({ edges, innerR, outerR, size, isRound }: StarProps) => {
+const Star = ({ edges, size, is_round = true, color = 'gold' }: StarProps) => {
   const points: string[] = [];
 
   for (let i = 0; i < edges * 2; i++) {
     const angle = (i * Math.PI) / edges;
-    const radius = i % 2 === 0 ? outerR : innerR;
+    const radius = i % 2 === 0 ? size : size/2;
     points.push(`${Math.cos(angle) * radius},${Math.sin(angle) * radius}`);
   }
 
   return (
-    <div className='star'>
-    <svg viewBox="-100 -100 200 200" width={`${size}`} height={`${size}`}>
-      <polygon points={points.join(' ')} fill="gold" stroke="gold" strokeWidth={`${innerR/2}`} strokeLinejoin={isRound? 'round' : 'miter'} strokeLinecap={isRound? 'round' : 'butt'}
-      /> 
-    </svg>
+    <div className='star' style={{ '--star-color': color }}>
+      <svg viewBox={`-${size} -${size} ${size * 2} ${size * 2}`} width={size * 2} height={size * 2}>
+        <polygon points={points.join(' ')} fill={color} stroke={color} strokeWidth={is_round ? size / 2 : '0.01px'} strokeLinejoin={is_round ? 'round' : 'miter'} strokeLinecap={is_round ? 'round' : 'butt'}
+        />
+      </svg>
     </div>
   );
 };

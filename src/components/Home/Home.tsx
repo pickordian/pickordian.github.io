@@ -1,14 +1,13 @@
 import "./Home.scss"
 import Star from "../../UI/Star/Star";
 
+const starGenerator = () =>{
+
+}
 function Home() {
   return (
     <section id="Home">
-    <Star edges={5} innerR ={12} outerR={27} size={90} isRound={true} />
-    <Star edges={5} innerR ={12} outerR={27} size={90} isRound={true} />
-    <Star edges={5} innerR ={12} outerR={27} size={90} isRound={true} />
-    <Star edges={5} innerR ={12} outerR={27} size={90} isRound={true} />
-    <Star edges={5} innerR ={12} outerR={27} size={90} isRound={true} />
+    <Star edges={4} size= {20} is_round={false} color ={'gold'} />
     </section>
   );
 }
