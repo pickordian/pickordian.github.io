@@ -1,0 +1,17 @@
+main {
+    width: 100svw;
+    height: 100svh;
+    background: radial-gradient(ellipse at top,hsl(39, 97%, 76%) 10%,  hsl(39, 97%, 56%) 20%, hsl(39, 97%, 76%) 40%, hsl(39, 97%, 56%) 60%, hsl(39, 97%, 76%) 100%);
+    clip-path: polygon(
+        1rem 1rem , 
+        1.5rem 1.5rem, 
+        1.5rem calc(100% - 1.5rem),
+        calc(100% - 1.5rem) calc(100% - 1.5rem), 
+        calc(100% - 1.5rem) 1.5rem,
+        1.5rem 1.5rem, 
+        1rem 1rem, 
+        calc(100% - 1rem ) 1rem, 
+        calc(100% - 1rem ) calc(100% - 1rem ), 
+        1rem calc(100% - 1rem )
+      );
+}

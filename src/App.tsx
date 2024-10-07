@@ -1,10 +1,10 @@
 import './App.scss'
 import Header from './components/Header/Header'
-import Home from './components/Home/Home'
+import Main from './components/Main/Main'
 function App() {
   return (
     <>
-      <Home/>
+      <Main/>
    </>
   )
 }
