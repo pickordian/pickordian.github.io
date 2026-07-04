@@ -1,0 +1,71 @@
+@import "tailwindcss";
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 12%);
+  --background: var(--white);
+  --sun: hsl(43, 100%, 50%);
+  --sun-gradient-1: hsl(43, 100%, 60%);
+  --sun-gradient-2: hsl(43, 100%, 70%);
+  --sun-shade: hsla(183, 80%, 50%, 0.75);
+  --sun-cta: hsl(350, 95%, 30%);
+  --sun-cta-gradient-1: hsl(350, 95%, 40%);
+  --sun-cta-gradient-2: hsl(10, 95%, 40%);
+  --sun-accent: hsl(216, 50%, 80%);
+  --moon: hsl(183, 95%, 88%);
+  --moon-gradient-1:hsl(183, 95%, 93%);
+  --moon-gradient-2:hsl(183, 100%, 97%);
+  --moon-shade: hsla(143, 80%, 50%, 0.75);
+  --moon-cta: hsl(50, 100%, 40%);
+  --primary: var(--sun);
+  --primary-gradient-1: var(--sun-gradient-1);
+  --primary-gradient-2: var(--sun-gradient-2);
+  --cta: var(--sun-cta);
+  --shade: var(--sun-shade);
+  --text-color: var(--dark);
+  --rune: #EF18C0;
+  --rune-gradient: #BC031F;
+  --frame-padding-x: 58.875px;
+  --frame-padding-y: 50.875px;
+  --frame-margin: 4px;
+  --frame-extra-white-space: 0.75rem;
+  --screen-padding-x: calc(var(--frame-padding-x) + var(--frame-margin) + var(--frame-extra-white-space));
+  --screen-padding-y: calc(var(--frame-padding-y) + var(--frame-margin) + var(--frame-extra-white-space));
+  --logo-size: 2rem;
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--font-almendra), sans-serif;
+  background: var(--background);
+  transition: background 0.5s;
+}
+html.dark{
+  --background: var(--dark);
+  --primary: var(--moon);
+  --primary-gradient-1: var(--moon-gradient-1);
+  --primary-gradient-2: var(--moon-gradient-2);
+  --background: var(--dark);
+  --text-color: var(--white);
+  --cta: var(--moon-cta);
+  --shade: var(--moon-shade);
+
+}
+button{
+  isolation: isolate;
+}
+button:hover{
+  cursor: pointer;
+}
+@media (min-width: 768px){
+  :root{
+    --frame-padding-x: 75.25px;
+    --frame-padding-y: 65.25px;
+    --logo-size: 3.5rem;
+  }
+}
+@media (min-width: 1980px){
+  :root{
+    --frame-padding-x: 132px;
+    --frame-padding-y: 117px;
+  }
+}

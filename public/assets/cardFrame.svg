@@ -1,0 +1,10 @@
+<svg viewBox="0 0 329 519" fill="var(--dark)" xmlns="http://www.w3.org/2000/svg">
+<path d="M137.772 19L166.896 47.6387L169 49.707L171.104 47.6387L200.228 19H317V513H20V19H137.772Z" stroke="url(#card_frame_color)" stroke-width="6"/>
+<path d="M201.34 29.751L201.623 30H328V502H10V30H136.377L136.66 29.751L169 1.33105L201.34 29.751Z" stroke="url(#card_frame_color)" stroke-width="2"/>
+<defs>
+    <linearGradient id="#card_frame_color" x1="21" y1="-8.5" x2="12" y2="86.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="var(--primary)"/>
+        <stop offset="1" stop-color="var(--primary)"/>
+    </linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M256.349 0C283.326 27.1219 300 64.5035 300 105.78C300 188.623 232.843 255.78 150 255.78C67.1573 255.78 0 188.623 0 105.78C0 64.504 16.6722 27.1218 43.6494 0C28.7504 21.1501 20 46.943 20 74.7803C20 146.577 78.203 204.78 150 204.78C221.797 204.78 280 146.577 280 74.7803C280 46.9427 271.248 21.1502 256.349 0Z" fill="url(#moonGradient)"/>
+    <defs>
+        <radialGradient id="moonGradient" cx="50%" cy="75%" r="50%" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="var(--moon-gradient-1)" />
+            <stop offset="100%" stop-color="var(--moon-gradient-2)"/>
+        </radialGradient>
+    </defs>
+</svg>
